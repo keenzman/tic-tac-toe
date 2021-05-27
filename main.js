@@ -71,8 +71,32 @@ gridCells.forEach((cell) => {
       isPlayerOneTurn = true;
     }
 
-    console.log("This is the first row: ", checkWinCondition(firstRow));
-    console.log("This is the second row: ", checkWinCondition(secondRow));
-    console.log("This is the third row: ", checkWinCondition(thirdRow));
+    const firstRowWinCheck = checkWinCondition(firstRow);
+    // console.log("This is the first row: ", checkWinCondition(firstRow));
+
+    const secondRowWinCheck = checkWinCondition(secondRow);
+    // console.log("This is the second row: ", checkWinCondition(secondRow));
+
+    const thirdRowWinCheck = checkWinCondition(thirdRow);
+    // console.log("This is the third row: ", checkWinCondition(thirdRow));
+
+    // Who has won? -> Alert()
+    // Check if one of the func. is true
+    // Check vars of players
+    // if Pl1 is true, Pl2 is actually the one who won, as it is his turn
+    // and vice versa
+    if (firstRowWinCheck && isPlayerOneTurn) {
+      alert("Player 2 has won!");
+    } else if (secondRowWinCheck && isPlayerOneTurn) {
+      alert("Player 2 has won");
+    } else if (thirdRowWinCheck && isPlayerOneTurn) {
+      alert("Player 2 has won");
+    } else if (firstRowWinCheck && isPlayerTwoTurn) {
+      alert("Player 1 has won!");
+    } else if (secondRowWinCheck && isPlayerTwoTurn) {
+      alert("Player 1 has won!");
+    } else if (thirdRowWinCheck && isPlayerTwoTurn) {
+      alert("Player 1 has won!");
+    }
   });
 });
