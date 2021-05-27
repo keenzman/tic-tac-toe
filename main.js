@@ -19,6 +19,11 @@
 const grid = document.querySelector(".grid");
 const gridCells = document.querySelectorAll(".grid__cell");
 
+// --
+// A way of storing player go or not
+// var to track -> change it -> let
+// - isPlayerOneTurn -> true
+// - isPlayerTwoTurn -> false
 let isPlayerOneTurn = true;
 let isPlayerTwoTurn = false;
 gridCells.forEach((cell) => {
@@ -26,6 +31,17 @@ gridCells.forEach((cell) => {
     // Seeing it as an obj, rather than an HTML elem.
     // console.log({ cell });
     // cell.innerHTML = "X";
+
+    // Guard condition, checks if slot is empty. i.e. no textContent
+    if (cell.innerHTML !== "") {
+      alert("Already taken! Choose an Empty Slot");
+      return;
+    }
+    // player's turn
+    // update event -> if Pl1, do X, else do 0
+    // update player tracker to switch turn
+    // - If Pl1 turn -> Pl1 = false & Pl2 = true
+    // - If Pl2 turn -> Pl1 = true & Pl2 = false
     if (isPlayerOneTurn && !isPlayerTwoTurn) {
       cell.innerHTML = "X";
       isPlayerOneTurn = false;
@@ -37,15 +53,3 @@ gridCells.forEach((cell) => {
     }
   });
 });
-
-// --
-// A way of storing player go or not
-// var to track -> change it -> let
-// - isPlayerOneTurn -> true
-// - isPlayerTwoTurn -> false
-
-// player's turn
-// update event -> if Pl1, do X, else do 0
-// update player tracker to switch turn
-// - If Pl1 turn -> Pl1 = false & Pl2 = true
-// - If Pl2 turn -> Pl1 = true & Pl2 = false
