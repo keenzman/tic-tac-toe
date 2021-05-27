@@ -19,6 +19,23 @@
 const grid = document.querySelector(".grid");
 const gridCells = document.querySelectorAll(".grid__cell");
 
+// Do a horizontal check of first row -> XXX or OOO to win
+// Remember that we get a NodeList of all 9 cells
+const firstRow = [gridCells[0], gridCells[1], gridCells[2]];
+
+const checkWinCondition = (squareArr) => {
+  const innerHTMLArr = squareArr.map((square) => {
+    return square.innerHTML;
+  });
+  // console.log(innerHTMLArr); // ["X", "O", "X"]
+  const toCheck = innerHTMLArr.join("");
+  if (toCheck === "XXX" || toCheck === "OOO") {
+    return true;
+  } else {
+    return false;
+  }
+};
+
 // --
 // A way of storing player go or not
 // var to track -> change it -> let
@@ -51,5 +68,7 @@ gridCells.forEach((cell) => {
       isPlayerTwoTurn = false;
       isPlayerOneTurn = true;
     }
+
+    console.log(checkWinCondition(firstRow));
   });
 });
