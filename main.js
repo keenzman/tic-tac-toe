@@ -85,18 +85,30 @@ gridCells.forEach((cell) => {
     // Check vars of players
     // if Pl1 is true, Pl2 is actually the one who won, as it is his turn
     // and vice versa
-    if (firstRowWinCheck && isPlayerOneTurn) {
-      alert("Player 2 has won!");
-    } else if (secondRowWinCheck && isPlayerOneTurn) {
-      alert("Player 2 has won");
-    } else if (thirdRowWinCheck && isPlayerOneTurn) {
-      alert("Player 2 has won");
-    } else if (firstRowWinCheck && isPlayerTwoTurn) {
-      alert("Player 1 has won!");
-    } else if (secondRowWinCheck && isPlayerTwoTurn) {
-      alert("Player 1 has won!");
-    } else if (thirdRowWinCheck && isPlayerTwoTurn) {
-      alert("Player 1 has won!");
+    // if (firstRowWinCheck && isPlayerOneTurn) {
+    //   alert("Player 2 has won!");
+    // } else if (secondRowWinCheck && isPlayerOneTurn) {
+    //   alert("Player 2 has won");
+    // } else if (thirdRowWinCheck && isPlayerOneTurn) {
+    //   alert("Player 2 has won");
+    // } else if (firstRowWinCheck && isPlayerTwoTurn) {
+    //   alert("Player 1 has won!");
+    // } else if (secondRowWinCheck && isPlayerTwoTurn) {
+    //   alert("Player 1 has won!");
+    // } else if (thirdRowWinCheck && isPlayerTwoTurn) {
+    //   alert("Player 1 has won!");
+    // }
+
+    if (firstRowWinCheck || secondRowWinCheck || thirdRowWinCheck) {
+      let winningMsg;
+
+      if (isPlayerOneTurn) {
+        winningMsg = "Player 2 Wins!";
+      } else {
+        winningMsg = "Player 1 Wins!";
+      }
+
+      alert(winningMsg);
     }
   });
 });
