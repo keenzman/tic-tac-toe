@@ -21,7 +21,8 @@ const gridCells = document.querySelectorAll(".grid__cell");
 
 gridCells.forEach((cell) => {
   cell.addEventListener("click", () => {
-    console.log(cell);
+    // Seeing it as an obj, rather than an HTML elem.
+    console.log({ cell });
     cell.innerHTML = "X";
   });
 });
