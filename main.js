@@ -8,3 +8,20 @@
 
 // 0s and Xs -> connect three to win
 // players turn -> click on square to make it either X/0
+
+// -- Begin --
+// GET GRID SQUARES IN JS
+//  -> LINK JS IN HTML
+//  -> GET THE SQUARES IN JS // RESEARCH -> how we have done this before?
+//  -> LOG TO CONSOLE
+// --
+
+const grid = document.querySelector(".grid");
+const gridCells = document.querySelectorAll(".grid__cell");
+
+gridCells.forEach((cell) => {
+  cell.addEventListener("click", () => {
+    console.log(cell);
+    cell.innerHTML = "X";
+  });
+});

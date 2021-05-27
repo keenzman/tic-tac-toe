@@ -4,11 +4,14 @@
 //  -> LINK CSS AND HTML
 //  -> MAKE HTML
 //  -> APPLY CSS FOR GRID
-// GET GRID SQUARES IN JS
-//  -> LINK JS IN HTML
-//  -> GET THE SQUARES IN JS // RESEARCH -> how we have done this before?
-//  -> LOG TO CONSOLE
-// ----------------------- */
+--------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .grid {
   display: -ms-grid;
   display: grid;
