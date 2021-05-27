@@ -117,5 +117,7 @@ gridCells.forEach((cell) => {
 const resetGame = () => {
   gridCells.forEach((cell) => {
     cell.innerHTML = "";
+    isPlayerOneTurn = true;
+    isPlayerTwoTurn = false;
   });
 };
