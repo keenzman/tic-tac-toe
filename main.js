@@ -22,6 +22,8 @@ const gridCells = document.querySelectorAll(".grid__cell");
 // Do a horizontal check of first row -> XXX or OOO to win
 // Remember that we get a NodeList of all 9 cells
 const firstRow = [gridCells[0], gridCells[1], gridCells[2]];
+const secondRow = [gridCells[3], gridCells[4], gridCells[5]];
+const thirdRow = [gridCells[6], gridCells[7], gridCells[8]];
 
 const checkWinCondition = (squareArr) => {
   const innerHTMLArr = squareArr.map((square) => {
@@ -69,6 +71,8 @@ gridCells.forEach((cell) => {
       isPlayerOneTurn = true;
     }
 
-    console.log(checkWinCondition(firstRow));
+    console.log("This is the first row: ", checkWinCondition(firstRow));
+    console.log("This is the second row: ", checkWinCondition(secondRow));
+    console.log("This is the third row: ", checkWinCondition(thirdRow));
   });
 });
