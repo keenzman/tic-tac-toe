@@ -109,6 +109,13 @@ gridCells.forEach((cell) => {
       }
 
       alert(winningMsg);
+      resetGame();
     }
   });
 });
+
+const resetGame = () => {
+  gridCells.forEach((cell) => {
+    cell.innerHTML = "";
+  });
+};
