@@ -1,0 +1,28 @@
+/* // 3 x 3 grid -> empty at start
+// UI -> what the user will use
+// HTML + CSS = grid
+//  -> LINK CSS AND HTML
+//  -> MAKE HTML
+//  -> APPLY CSS FOR GRID
+// GET GRID SQUARES IN JS
+//  -> LINK JS IN HTML
+//  -> GET THE SQUARES IN JS // RESEARCH -> how we have done this before?
+//  -> LOG TO CONSOLE
+// ----------------------- */
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (200px)[3];
+      grid-template-rows: repeat(3, 200px);
+  -ms-grid-columns: (200px)[3];
+      grid-template-columns: repeat(3, 200px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.grid__cell {
+  background: #eca2a2;
+  border: 1px solid white;
+}
+/*# sourceMappingURL=styles.css.map */
